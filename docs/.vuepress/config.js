@@ -13,13 +13,19 @@ module.exports = {
     },
     lastUpdated: 'Last Updated',
     themeConfig: {
-        repo: 'mouworks',
         nav:[ // 导航栏配置
-            {text: 'Others',
+            {text: 'LifeIsMoney',
                 items: [
-                    { text: 'notes', link: '/others/note.html'},
+                    { text: 'WifiCompare', link: '/others/wifiCompare.html'},
+                    { text: 'CoWorkSpaces', link: '/others/coworkComp.html'},
                 ]
-            }
+            },
+            {text: 'TripRelated',
+                items: [
+                    { text: 'busan', link: '/others/busan.html'},
+                    { text: 'tokyo', link: '/others/jpTrip.html'},
+                ]
+            },
         ],
         sidebar: 'auto',
         // sidebar: [
