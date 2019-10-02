@@ -7,7 +7,7 @@ module.exports = {
         ['link', { rel: 'apple-touch-icon', href: '/photo.jpg' }],
     ],
     serviceWorker: true, // 是否开启 PWA
-    base: '/blog', // 这是部署到github相关的配置
+    base: '/', // 这是部署到github相关的配置
     markdown: {
         lineNumbers: true // 代码块显示行号
     },
@@ -16,14 +16,14 @@ module.exports = {
         nav:[ // 导航栏配置
             {text: 'LifeIsMoney',
                 items: [
-                    { text: 'WifiCompare', link: '/others/wifiCompare.html'},
-                    { text: 'CoWorkSpaces', link: '/others/coworkComp.html'},
+                    { text: 'WifiCompare', link: '/wifiCompare.html'},
+                    { text: 'CoWorkSpaces', link: '/coworkComp.html'},
                 ]
             },
             {text: 'TripRelated',
                 items: [
-                    { text: 'busan', link: '/others/busan.html'},
-                    { text: 'tokyo', link: '/others/jpTrip.html'},
+                    { text: 'busan', link: '/busan.html'},
+                    { text: 'tokyo', link: '/jpTrip.html'},
                 ]
             },
         ],
