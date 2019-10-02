@@ -1,0 +1,60 @@
+version: 2.1
+
+orbs:
+  slack: circleci/slack@3.3.0
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.9
+
+    working_directory: ~/blog
+    environment:
+      - SOURCE_BRANCH: src
+      - TARGET_BRANCH: master
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            # This key require additional setup @circleCI
+            - "8d:ae:2c:a0:8b:4b:c0:49:d0:5e:d9:f0:d3:5c:8c:7e"
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run:
+          name: Install dependencies
+          command: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Install Vuepress
+          command: sudo yarn global add vuepress
+
+      - deploy:
+          name: Deploy (Push back to github)
+          command: |
+            mv .circleci/circleci_deploy.sh .
+            ./circleci_deploy.sh
+      - slack/notify:
+          title: "Blog 內容更新完成 :) @ blog.m0u.work / mouworks.github.io"
+          message: "Deployed by CircleCI"
+          #          mentions: "USERID1,USERID2," # Optional: Enter the Slack IDs of any user or group (sub_team) to be mentioned
+          color: "#42e2f4" # Optional: Assign custom colors for each notification
+          webhook: ${SLACK_WEBHOOK} # Optional: Enter a specific webhook here or the default will use $SLACK_WEBHOOK
+workflows:
+  version: 2.1
+  build_and_auto_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - src
+
