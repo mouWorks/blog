@@ -4,7 +4,7 @@
 
 |Deadline| Title | Link | Location  | Note | $$$ | Req | 
 |:---------|:---------|:--------|:-------|:--------|:----|:----|
-|9/25|NodeJS@shopback| Shopback|  aaaa | bbbb | Slow on Iphone XR, bad| NodeJS, 作業|
+|9/25|NodeJS@shopback| Shopback|  aaaa | bbbb | | NodeJS, 作業|
 |9/22|Java/Python@Gogoro|[Backend](https://www.yourator.co/companies/Gogoro/jobs/2830) | 林口龜山 | 840k-1200k yr ||Java/Python|
 ||PHP@VeryBuy|[後端工程](https://www.yourator.co/companies/VeryBuy/jobs/1142) |民權西路/中山國小 | 可能類似ASAP/104情況 |40k~90k|sadad|
 ||DevOps@Gogolook|[DevOps](https://www.yourator.co/companies/Whoscall/jobs/9382) |古亭站 |  |85k~120k|python/go, k8s, docker|

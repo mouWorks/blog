@@ -32,7 +32,20 @@ https://www.npmjs.com/package/seo_sniffer
     8. 有用過板控嗎？
         * Git (github flow), SVN
     9. 承 Q8. 說明 Git 的 reset and reverse 差異
+        * `git reset` -> 類似Goto, 前往之前的某個特定Commit
+            * `mixed` -> 暫存區丟掉, 工作目錄不變 -> 拆出檔案丟回工作目錄
+            * `soft` -> 暫存區和工作目錄都不會變  -> 拆出檔案丟回暫存區
+            * `hard` -> 暫存區和工作目錄都丟掉 -> 拆出檔案直接丟掉
+        * `git reverse` -> 應該是 `git revert`
+        * `git reset SHA1` : 會將 HEAD 和分支都移到同一個地方
+            * `--mixed` : 檔案留在工作目錄
+            * `--soft` : 檔案和目錄都在暫存區
+            * `--hard` : 變動都丟掉
+        * `git revert SHA1` : 建立一個反向 commit, 等於多一次commit 做 revert 的事情    
     10. 承 Q9. 說明一下 Git 的 rebase
+        * `git rebase`: 
+    
+    
     11. 有做過什麼 sideProject?
         * NodeJS+LineChatBot (Pepebot/WeddingHelper) -> njs+lambda
         * MouWorks (ansible+docker) -> Infra, 部署的練習
