@@ -32,6 +32,7 @@ module.exports = {
                     { text: 'Req', link: '/job/req.html'},
                     { text: 'list', link: '/job/list.html'},
                     { text: 'jobs', link: '/job/jobs.html'},
+                    { text: 'git', link: '/job/git.html'},
                 ]
             },
         ],
