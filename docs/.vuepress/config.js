@@ -26,6 +26,12 @@ module.exports = {
                     { text: 'tokyo', link: '/jpTrip.html'},
                 ]
             },
+            {text: 'J',
+                items: [
+                    { text: 'SB Taiwan', link: '/sb_taiwan.html'},
+                    { text: 'list', link: '/list.html'},
+                ]
+            },
         ],
         sidebar: 'auto',
         // sidebar: [
