@@ -16,20 +16,22 @@ module.exports = {
         nav:[ // 导航栏配置
             {text: 'LifeIsMoney',
                 items: [
-                    { text: 'WifiCompare', link: '/wifiCompare.html'},
-                    { text: 'CoWorkSpaces', link: '/coworkComp.html'},
+                    { text: 'WifiCompare', link: '/lifeIsMoney/wifiCompare.html'},
+                    { text: 'CoWorkSpaces', link: '/lifeIsMoney/coworkComp.html'},
                 ]
             },
             {text: 'TripRelated',
                 items: [
-                    { text: 'busan', link: '/busan.html'},
-                    { text: 'tokyo', link: '/jpTrip.html'},
+                    { text: 'busan', link: '/trip/busan.html'},
+                    { text: 'tokyo', link: '/trip/jpTrip.html'},
                 ]
             },
             {text: 'J',
                 items: [
-                    { text: 'SB Taiwan', link: '/sb_taiwan.html'},
-                    { text: 'list', link: '/list.html'},
+                    { text: 'SB Taiwan', link: '/job/sb_taiwan.html'},
+                    { text: 'Req', link: '/job/req.html'},
+                    { text: 'list', link: '/job/list.html'},
+                    { text: 'jobs', link: '/job/jobs.html'},
                 ]
             },
         ],
